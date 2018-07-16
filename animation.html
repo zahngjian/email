@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 300px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: all 5s;
+            transform: rotateX(30deg) rotateY(30deg);
+			-webkit-porspective:1000;
+			animation:zhuan 3s linear infinite;
+        }
+        .box div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            transition:all 3s;
+            opacity:0.5;
+			animation:shan 3s infinite;
+        }
+		@keyframes zhuan{
+			form{transform: rotateX(360deg) rotateY(360deg)}
+			to{transform: rotateX(360deg) rotateY(360deg)}
+		}
+		.box:hover{
+		 animation:zhuan 3s infinite;
+		 
+		}
+        .box div:nth-child(1){
+            background: #1f7eff;
+            transform: translateZ(100px);
+        }
+        .box div:nth-child(2){
+            background: #1f7eff;
+
+            opacity: 0.5;
+            transform: translateZ(-100px);
+        }
+        .box div:nth-child(3){
+            background: #9fff78;
+
+            opacity: 0.5;
+            transform:rotateX(90deg) translateZ(100px);
+        }
+        .box div:nth-child(4){
+            background: #cb2b31;
+
+            opacity: 0.5;
+            transform:rotateX(-90deg) translateZ(100px);
+        }
+        .box div:nth-child(5){
+            background: #ffc634;
+            opacity: 0.5;
+            transform:rotateY(90deg) translateZ(100px);
+        }
+        .box div:nth-child(6){
+            background: #f63fff;
+            opacity: 0.5;
+            transform:rotateY(90deg) translateZ(-100px);
+        }
+		/*旋转*/
+		 .box:hover div{
+            background: #1f7eff;
+            opacity: 0.5;
+            transform:rotateX(360deg) rotateY(360deg) translateZ(300px);
+			border-radius:50%;
+        }
+        .box:hover div:nth-child(2){
+            background: #1f7eff;
+            opacity: 0.5;
+            transform:rotateX(360deg) rotateY(360deg) translateZ(-300px);
+        }
+        .box:hover div:nth-child(3){
+            background: #9fff78;
+
+            opacity: 0.5;
+            transform:rotateX(90deg) translateZ(300px);
+        }
+        .box:hover div:nth-child(4){
+            background: #cb2b31;
+
+            opacity: 0.5;
+            transform:rotateX(-90deg) translateZ(300px);
+        }
+        .box:hover div:nth-child(5){
+            background: #ffc634;
+            opacity: 0.5;
+            transform:rotateY(90deg) translateZ(300px);
+        }
+        .box:hover div:nth-child(6){
+            background: #f63fff;
+            opacity: 0.5;
+            transform:rotateY(90deg) translateZ(-300px);
+        }
+    </style>
+</head>
+<body>
+ <div class="box">
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+ </div>
+</body>
+</html>
